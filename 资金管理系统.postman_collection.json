@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "b9fbff02-eb26-4304-b8a6-a462213b3c2f",
+		"name": "资金管理系统",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "注册接口",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "a758922095@163.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "zhangyong",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "identity",
+							"value": "emplloyee",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登录接口",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "758922093@qq.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "zy1956**",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "根据会话获取用户信息",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjYjFhZWVjMjdmYWQxOTFjNDY1MjFmZCIsIm5hbWUiOiJ0ZXN0MSIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvZmQ2YzdlMzk0M2JmZmM5M2QwMTI1NmZjMGFkNzQwMzI_cz0yMDAmcj1wZyZkPW1tIiwiaWRlbnRpdHkiOiJlbXBsb3llZSIsImlhdCI6MTU1NTE1NDY4MiwiZXhwIjoxNTU1MTU0NjkyfQ.AL-MLR3MnFdNXyMzzIICPhgHjlhBr-wPGPayz8xhWmI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/users/current",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"current"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "添加信息",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjYjFhZWVjMjdmYWQxOTFjNDY1MjFmZCIsIm5hbWUiOiJ0ZXN0MSIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvZmQ2YzdlMzk0M2JmZmM5M2QwMTI1NmZjMGFkNzQwMzI_cz0yMDAmcj1wZyZkPW1tIiwiaWRlbnRpdHkiOiJlbXBsb3llZSIsImlhdCI6MTU1NTE2NDY5MiwiZXhwIjoxNTU1MjUxMDkyfQ.09MbKoBwm_n9vNtYNFvtpmaypJKluL-AfjXfZTdpUyo",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "type",
+							"value": "实际购买",
+							"type": "text"
+						},
+						{
+							"key": "describe",
+							"value": "购买系统",
+							"type": "text"
+						},
+						{
+							"key": "income",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "expend",
+							"value": "50",
+							"type": "text"
+						},
+						{
+							"key": "cash",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "remark",
+							"value": "资金管理系统211111111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profiles/add?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profiles",
+						"add"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "describe",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取全部信息",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjYjE2NzhjNTk5ZjU5MzFlMDIwMWU3MiIsIm5hbWUiOiJ6aGFuZ3lvbmciLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyL2JmYWE1MzFjMDlmNDEyMjhjYWQxNzk3MDk0ZTgzMDVhP3M9MjAwJnI9cGcmZD1tbSIsImlkZW50aXR5IjoiZW1wbGxveWVlIiwiaWF0IjoxNTU1MTMyMzM0LCJleHAiOjE1NTUxMzU5MzR9.vNeB7OoAKfAOkUbNHBxqznk72bchP00wU_c9e91BjjQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profiles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取单个信息",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjYjE2NzhjNTk5ZjU5MzFlMDIwMWU3MiIsIm5hbWUiOiJ6aGFuZ3lvbmciLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyL2JmYWE1MzFjMDlmNDEyMjhjYWQxNzk3MDk0ZTgzMDVhP3M9MjAwJnI9cGcmZD1tbSIsImlkZW50aXR5IjoiZW1wbGxveWVlIiwiaWF0IjoxNTU1MTMyMzM0LCJleHAiOjE1NTUxMzU5MzR9.vNeB7OoAKfAOkUbNHBxqznk72bchP00wU_c9e91BjjQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profiles/5cb16f22246d5e4f889bbef7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profiles",
+						"5cb16f22246d5e4f889bbef7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "编辑信息",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjYjE2NzhjNTk5ZjU5MzFlMDIwMWU3MiIsIm5hbWUiOiJ6aGFuZ3lvbmciLCJhdmF0YXIiOiIvL3d3dy5ncmF2YXRhci5jb20vYXZhdGFyL2JmYWE1MzFjMDlmNDEyMjhjYWQxNzk3MDk0ZTgzMDVhP3M9MjAwJnI9cGcmZD1tbSIsImlkZW50aXR5IjoiZW1wbGxveWVlIiwiaWF0IjoxNTU1MTMyMzM0LCJleHAiOjE1NTUxMzU5MzR9.vNeB7OoAKfAOkUbNHBxqznk72bchP00wU_c9e91BjjQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\":\"实际购买\",\n\t\"describe\":\"购买系统\",\n\t\"income\":\"3432432\",\n\t\"expend\":\"23432\",\n\t\"cash\":\"234\",\n\t\"remark\":\"df\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profiles/edit/5cb16f22246d5e4f889bbef7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profiles",
+						"edit",
+						"5cb16f22246d5e4f889bbef7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "删除信息",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVjYjFhZWVjMjdmYWQxOTFjNDY1MjFmZCIsIm5hbWUiOiJ0ZXN0MSIsImF2YXRhciI6Ii8vd3d3LmdyYXZhdGFyLmNvbS9hdmF0YXIvZmQ2YzdlMzk0M2JmZmM5M2QwMTI1NmZjMGFkNzQwMzI_cz0yMDAmcj1wZyZkPW1tIiwiaWRlbnRpdHkiOiJlbXBsb3llZSIsImlhdCI6MTU1NTE2NDY5MiwiZXhwIjoxNTU1MjUxMDkyfQ.09MbKoBwm_n9vNtYNFvtpmaypJKluL-AfjXfZTdpUyo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profiles/delete/5cb1ece2cf56abac1005ae51",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profiles",
+						"delete",
+						"5cb1ece2cf56abac1005ae51"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
