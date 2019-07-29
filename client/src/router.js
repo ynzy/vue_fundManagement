@@ -7,6 +7,8 @@ import Nofind from './views/404'
 import Home from './views/Home.vue'
 import InfoShow from './views/InfoShow.vue'
 import FoundList from './views/FoundList'
+import foundDetail from './views/foundDetail'
+
 import touchdemo from './views/touchdemo.vue'
 import touchdemo2 from './views/touchdemo2.vue'
 import touchdemo3 from './views/touchdemo3.vue'
@@ -18,7 +20,7 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      redirect: '/index',
+      redirect: '/index', 
     },
     {
       path: '/index',
@@ -32,6 +34,8 @@ const router = new Router({
         { path: '/infoshow', name: 'infoshow', component: InfoShow },
         // 资金流水
         { path: '/foundlist', name: 'foundlist', component: FoundList },
+        //列表详情
+        { path: '/foundDetail', name: 'foundDetail',meta:'admin', component: foundDetail },
         // 手机滑动页
         { path: '/touchdemo', name: 'touchdemo', component: touchdemo },
         { path: '/touchdemo2', name: 'touchdemo2', component: touchdemo2 },

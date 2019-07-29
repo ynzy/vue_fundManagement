@@ -48,9 +48,9 @@ mongoose
 app.use(passport.initialize());
 require('./config/passport')(passport);
 
-// app.get("/",(req,res) => {  //发送一个请求
-//     res.send("hello World!")
-// })
+app.get("/",(req,res) => {  //发送一个请求
+    res.send("hello World!")
+})
 
 
 

@@ -51,7 +51,7 @@
           </template>
         </el-table-column>
         <el-table-column prop="remark" label="备注" align="center" width="220"></el-table-column>
-        <el-table-column prop="operation" align="center" label="操作" fixed="right" width="180" v-if="user.identity=='manager'">
+        <el-table-column prop="operation" align="center" label="操作" fixed="right" width="240" v-if="user.identity=='manager'">
           <template slot-scope="scope">
             <el-button type="warning" icon="edit" size="small" @click="onEditMoney(scope.row)">编辑</el-button>
             <el-button
@@ -60,6 +60,15 @@
               size="small"
               @click="onDeleteMoney(scope.row,scope.$index)"
             >删除</el-button>
+            <el-button
+              type="primary"
+              icon="search"
+              size="small"
+              @click="onShow(scope.row._id)"
+            >
+            查看
+            <!-- <router-link :to="{ name: 'foundDetail', query: { id: scope.row._id }}">查看</router-link> -->
+            </el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -129,6 +138,9 @@ export default {
   },
 
   methods: {
+    onShow(id) {
+      this.$router.push({ path: '/foundDetail', query: { id: id }})
+    },
     getProfile() {
       //获取表格数据
       // 获取表格数据
