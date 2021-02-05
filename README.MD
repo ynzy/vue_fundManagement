@@ -23,7 +23,7 @@ yarn
 ```
 2. 安装mongoDB数据库并成功启动
 
-* windows安装包,百度链接：[https://pan.baidu.com/s/1M7HhtTRW8fE1Oknb0o4TgA](https://pan.baidu.com/s/1M7HhtTRW8fE1Oknb0o4TgA) 提取码：kz8x
+* windows安装包,百度链接：[https://pan.baidu.com/s/1zi7W4LZkDT9opjiRP65y9A](https://pan.baidu.com/s/1zi7W4LZkDT9opjiRP65y9A) 提取码：5rwj
 * [win版MongoDB安装教程](http://baijiahao.baidu.com/s?id=1601512248926547477&wfr=spider&for=pc)
 * MongoDB配置环境变量里面写的不清楚，我在这里重写下，
 ```js
