@@ -22,7 +22,7 @@
 yarn
 ```
 2. 安装mongoDB数据库并成功启动
-
+* 安装参考地址：https://www.yuque.com/docs/share/10cf91f8-80b6-48ff-b2d6-a3ccbe4a3231?# 《本地安装MongoDB》
 * windows安装包,百度链接：[https://pan.baidu.com/s/1zi7W4LZkDT9opjiRP65y9A](https://pan.baidu.com/s/1zi7W4LZkDT9opjiRP65y9A) 提取码：5rwj
 * [win版MongoDB安装教程](http://baijiahao.baidu.com/s?id=1601512248926547477&wfr=spider&for=pc)
 * MongoDB配置环境变量里面写的不清楚，我在这里重写下，
