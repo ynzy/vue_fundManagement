@@ -15,12 +15,12 @@ import touchdemo3 from './views/touchdemo3.vue'
 Vue.use(Router)
 
 const router = new Router({
-	mode: 'history',
-	base: process.env.BASE_URL,
+	mode: 'history', // 路由模式  // history hash
+	// base: process.env.BASE_URL,
 	routes: [
 		{
 			path: '/',
-			redirect: '/index'
+			redirect: '/index'  // 重定向
 		},
 		{
 			path: '/index',
@@ -61,10 +61,15 @@ router.beforeEach((to, from, next) => {
 	//判断本地存储token是否过期
 	const isLogin = localStorage.eleToken ? true : false
 	if (to.path == '/login' || to.path == '/register') {
-		next()
+		isLogin ? next('/index') : next()
 	} else {
 		isLogin ? next() : next('/login')
 	}
+	// if (to.path == '/login' || to.path == '/register') {
+	// 	next()
+	// } else {
+	// 	isLogin ? next() : next('/login')
+	// }
 })
 
 export default router

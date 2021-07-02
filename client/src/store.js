@@ -14,15 +14,15 @@ const state = { // 需要维护的状态
   user: {}   // 存储用户信息
 }
 
-const getters ={
+const getters = {
   isAutnenticated: state => state.isAutnenticated,
   user: state => state.user
 }
-const actions ={
-  setIsAutnenticated: ({commit}, isAutnenticated) => {
+const actions = {
+  setIsAutnenticated: ({ commit }, isAutnenticated) => {
     commit(types.SET_IS_AUTNENTIATED, isAutnenticated)
   },
-  setUser: ({commit}, user ) => {
+  setUser: ({ commit }, user) => {
     commit(types.SET_USER, user)
   },
   //退出登录
@@ -31,18 +31,19 @@ const actions ={
     commit(types.SET_USER, null)
   }
 }
-const mutations ={
+const mutations = {
   [types.SET_IS_AUTNENTIATED](state, isAutnenticated) {
     if (isAutnenticated) {
       state.isAutnenticated = isAutnenticated
-    }else {
+    } else {
       state.isAutnenticated = false
     }
   },
   [types.SET_USER](state, user) {
+    console.log(user);
     if (user) {
       state.user = user
-    }else {
+    } else {
       state.user = {}
     }
   }

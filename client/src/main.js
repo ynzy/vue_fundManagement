@@ -4,6 +4,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import axios from './http'
 
+// 路由相关逻辑
 import router from './router'
 import store from './store'
 
