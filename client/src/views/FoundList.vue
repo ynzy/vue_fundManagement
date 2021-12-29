@@ -87,7 +87,7 @@ export default {
 			dialog: {
 				show: false,
 				title: '',
-				option: 'edit'
+				option: 'edit' // add edit
 			},
 			form: {
 				type: '',
